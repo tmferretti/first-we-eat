@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  diet_restriction: MyString
+  health_label: MyString
+
+two:
+  user_id: 1
+  diet_restriction: MyString
+  health_label: MyString

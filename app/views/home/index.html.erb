@@ -2,12 +2,12 @@ I am the home page.
 
 <%= link_to "Sign Out", "/users/sign_out", method: :delete %>
 
-<%= form_tag "/", method: :post do%>
+<%= form_tag "/home", method: :post do%>
 	<div class="well">
 	    <form>
 	      <div class="form-group">
-	        <label for="search-query-label">Enter the words you want to use to search foods.</label>
-	        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter the foods" name="query">
+	        <label for="search-query-label"><p>Search for a recipe:</p></label>
+	        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter the food" name="query">
 	      </div>
 	      <button type="submit" class="btn btn-primary">Submit</button>
 	    </form>
