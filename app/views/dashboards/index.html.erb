@@ -580,17 +580,15 @@ footer, footer a { background:#000; color:#aaa; }
 							<aside class="basilSidebar"><div class="sidebar left"><ul class="widgets"><div id="theme-widget-recent-tweets-2" class="widget theme-widget-recent-tweets"><div class="tweets-widget"><h3 class="widget-title"><i class="fa fa-twitter-square"></i>&nbsp;&nbsp;Recent Tweets</h3><a href="http://twitter.com/boxystudio/"target="_blank" class="widget-button bgColor-1">Like</a>			
 				<div class="tweets-container">
 					
-					<ul>							<li>
-								<span class="tweet_text">Check out the new front-end recipe submission form in Cooked Pro, with a drag &amp; drop ingredient/direction builder.… <a href="https://t.co/H77xleK7a9" target="_blank">https://t.co/H77xleK7a9</a></span>
-								<span class="tweet_time"><a target="_blank" href="https://twitter.com/boxystudio/status/862315268911116288">Posted 10 hours ago &mdash; View on Twitter</a></span>
+					<ul>							
+							<li>
+								<img src="<%= @weekly_menu[0]["recipe"]["image"] %>">
 							</li>
 														<li>
-								<span class="tweet_text">@Gautam_Thapar Ah gotcha, yep. Working on some rebranding. Thanks for noticing! :)</span>
-								<span class="tweet_time"><a target="_blank" href="https://twitter.com/boxystudio/status/858707787521695749">Posted 2 weeks ago &mdash; View on Twitter</a></span>
+								<img src="<%= @weekly_menu[1]["recipe"]["image"] %>">
 							</li>
 														<li>
-								<span class="tweet_text">@UgurhanTurker Happy to look on Monday. Weekends are for relaxing! :)</span>
-								<span class="tweet_time"><a target="_blank" href="https://twitter.com/boxystudio/status/858703028878270464">Posted 2 weeks ago &mdash; View on Twitter</a></span>
+								<img src="<%= @weekly_menu[2]["recipe"]["image"] %>">
 							</li>
 							</ul>					
 				</div>
