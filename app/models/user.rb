@@ -1,8 +1,12 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  has_many :cuisines, through: :taste_preference
+  has_many :diet_restrictions, through: :user_diet
+  
+  # Default Devise modules
+  devise :database_authenticatable, :registerable, 
          :recoverable, :rememberable, :trackable, :validatable
   
-  # Im assuming this 
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+
 end
