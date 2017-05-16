@@ -1,0 +1,20 @@
+Cubic v1.1.3 11 Aug 2016
+- unlimited level submenu supported
+- submenu enhanced for mobile
+
+Cubic v1.1.2 29 Jul 2016
+- new submenu supported
+
+Cubic v1.1.1 14 Apr 2014
+- fixes for navigation issue on mobile
+- fixes for scroll position on mobile
+- new smooth header transition
+- new improved design & typography
+- new parallax background method
+
+Cubic v1.1.0 16 Oct 2014
+- new portfolio page layout
+- new social icon with color
+- now button can do page scroll (before only mainmenu)
+- new 'view all post' button on blog section
+- fixes for overlay issue on portfolio item
