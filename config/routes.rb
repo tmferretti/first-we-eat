@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-  
+  root :to => 'home#index'
+  devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+      
   get '/home' => 'home#index'
-  post '/home' => 'home#show'
+  # post '/home' => 'home#show'
   get '/home/login' => 'sessions#index'
   get '/mydashboard' => 'dashboards#index' # user's homepage
   get '/mydashboard/settings' => 'settings#index' # basic account information and settings page

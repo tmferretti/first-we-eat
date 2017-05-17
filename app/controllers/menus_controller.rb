@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
-	def index
-		
+	def show
+		@weekly_menu = RecipePreference.get_weekly_menu
+		render 'show.html.erb'
 	end
 end
