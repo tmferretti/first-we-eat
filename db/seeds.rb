@@ -4,3 +4,8 @@
 # 	Cuisine.create(name: cuisine)
 # end
 
+response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=100",
+  headers:{
+    "X-Mashape-Key" => "mjujTXvEe0mshWJmTGHz9riuUeIRp1CtxpRjsnnvhfdmxs5G41",
+    "Accept" => "application/json"
+  }
