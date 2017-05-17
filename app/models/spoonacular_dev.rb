@@ -1,0 +1,2 @@
+class SpoonacularDev < ApplicationRecord
+end
