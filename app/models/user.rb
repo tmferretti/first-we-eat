@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :cuisines, through: :taste_preference
+  has_many :liked_recipes, through: :taste_preference
   has_many :diet_restrictions, through: :user_diet
   
   # Default Devise modules

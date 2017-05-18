@@ -1,4 +1,4 @@
 class TastePreference < ApplicationRecord
 	belongs_to :user
-	belongs_to :cuisine
+	belongs_to :liked_recipe
 end

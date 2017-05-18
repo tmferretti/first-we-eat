@@ -83,3 +83,6 @@ production:
   database: first-we-eat_production
   username: first-we-eat
   password: <%= ENV['FIRST-WE-EAT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
