@@ -5,8 +5,7 @@ Rails.application.routes.draw do
       }
       
   get '/home' => 'home#index'
-  # post '/home' => 'home#show'
-  get '/home/login' => 'sessions#index'
+  # post '/home' => 'home#show
   get '/mydashboard' => 'dashboards#index' # user's homepage
   get '/mydashboard/settings' => 'settings#index' # basic account information and settings page
   get '/mydashboard/account' => 'accounts#index'
@@ -23,6 +22,7 @@ Rails.application.routes.draw do
   get '/mydashboard/menus/recipes/new' => 'recipes#new'
 
 
-  get '/quiz' => 'quizes#index' # index or show?
+  get '/quiz' => 'quizes#new'
+  post '/quiz' => 'quizes#create'
 
 end

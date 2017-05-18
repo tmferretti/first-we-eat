@@ -1,0 +1,105 @@
+<div class="offset"></div>
+  <div class="light-wrapper page-title">
+    <div class="container inner">
+      <h1>Portfolio with 4 Columns</h1>
+    </div>
+  </div>
+  
+    <div class="dark-wrapper">
+      <div class="container inner">
+        <div class="portfolio">
+          <ul class="filter">
+            <li><a class="active" href="#" data-filter="*">All</a></li>
+            <li><a href="#" data-filter=".graphic">Graphic Design</a></li>
+            <li><a href="#" data-filter=".mockup">Business Card</a></li>
+            <li><a href="#" data-filter=".video">Identity</a></li>
+            <li><a href="#" data-filter=".music">Application</a></li>
+          </ul>
+          <!-- /.filter -->
+          <div ng-app="app">
+
+
+            <%= form_tag("/quiz", method: "post") do %>
+              <ul class="items col4">
+                <% @quiz_recipes.sample(30).each do |recipe| %>
+                  <li class="item graphic">
+                      <label class="image-checkbox" title="<%= recipe['title'] %>">
+                        <img src="<%= recipe['image'] %>" />
+                        <input type="checkbox" name="liked_recipes[]" value="<%= recipe['id'] %>" style="width:312px;height:209px;"/>
+                        <figure class="icon-overlay medium icn-more"></figure>
+                        <div class="image-caption">
+                          <h3><!-- <a href="portfolio-post.html"> --><%= recipe['title'] %></h3>
+                          <span class="meta">source: <%= recipe['sourceName'] %></span> 
+                        </div>
+                      </label>
+                  </li>
+                <% end %>
+              </ul>
+            
+          </div>  
+        </div>
+        <!-- /.portfolio --> 
+      </div>
+      <!-- /.container --> 
+    </div>
+    <!-- /.dark-wrapper -->
+    <div class="color-wrapper">
+      <div class="container inner text-center">
+        <div class="thin">
+          <p class="lead">If you like what you see, let's work together.</p>
+          <p class="btn bm0"><%= submit_tag("Get Cooking.") %></p> </div>
+          <% end %>
+      </div>
+    </div>
+    
+
+
+  <script type="text/javascript">
+    jQuery(function ($) {
+        // init the state from the input
+        $(".image-checkbox").each(function () {
+            if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
+                $(this).addClass('image-checkbox-checked');
+            }
+            else {
+                $(this).removeClass('image-checkbox-checked');
+            }
+        });
+
+        // sync the state to the input
+        $(".image-checkbox").on("click", function (e) {
+            if ($(this).hasClass('image-checkbox-checked')) {
+                $(this).removeClass('image-checkbox-checked');
+                $(this).find('input[type="checkbox"]').first().removeAttr("checked");
+            }
+            else {
+                $(this).addClass('image-checkbox-checked');
+                $(this).find('input[type="checkbox"]').first().attr("checked", "checked");
+            }
+
+            e.preventDefault();
+        });
+    });
+</script>
+
+<style>
+    .image-checkbox
+    {
+        cursor: pointer;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 4px solid transparent;
+        outline: 0;
+    }
+
+        .image-checkbox input[type="checkbox"]
+        {
+            display: none;
+        }
+
+    .image-checkbox-checked
+    {
+        border-color: #f58723;
+    }
+</style>
