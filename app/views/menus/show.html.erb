@@ -9,7 +9,7 @@
     <div ng-controller="weeklyMenuController" class="container inner">
       <div class="row">
         <div class="col-sm-8 content">
-          <iframe src="https://spoonacular.com/ramen-noodle-coleslaw-556177" style="border: 0px none;  height: 1500px; width: 667px;"></iframe>
+          <iframe src="{{ currentRecipeUrl }}" style="border: 0px none;  height: 1500px; width: 667px;"></iframe>
         </div>
         <aside class="col-sm-4 sidebar lp30">
           <div class="sidebox widget">
@@ -30,7 +30,7 @@
             <h3>Popular Posts</h3>
             <ul class="post-list">
               <% @weekly_menu.sample(5).each do |dish| %>
-                <li ng-click="changeWeeklyRecipe(<%=  %>)">
+                <li ng-click="changeWeeklyRecipe('<%= dish['spoonacularSourceUrl'] %>')">
                   <div class="icon-overlay small icn-link"><img src="<%= dish['image'] %>" alt="" /> </div>
                   <div class="meta">
                     <h6><%= dish['title'] %></h6>
