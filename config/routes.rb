@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # post '/home' => 'home#show
   get '/mydashboard' => 'dashboards#index' # user's homepage
   get '/mydashboard/settings' => 'settings#index' # basic account information and settings page
-  get '/mydashboard/account' => 'accounts#index'
+  get '/mydashboard/account' => 'accounts#show'
 
   get '/mydashboard/explore' => 'menus#index'
   get '/mydashboard/menus/weeklymenu' => 'menus#show'

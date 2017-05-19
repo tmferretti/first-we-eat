@@ -16,6 +16,7 @@ class QuizesController < ApplicationController
 					cuisine_id: new_recipe.id
 				)
 				p recipe_join.errors
+				recipe_join.save
 			else
 				p new_recipe.errors
 			end
