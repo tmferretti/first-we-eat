@@ -5,8 +5,8 @@
       <div class="navigation pull-right"> <a href="#" title="Previous"><i class='icon-left-open-1'></i></a> <a href="#" title="Next"><i class='icon-right-open-1'></i></a> </div>
     </div>
   </div>
-  <div class="dark-wrapper">
-    <div class="container inner">
+  <div ng-app="app" class="dark-wrapper">
+    <div ng-controller="weeklyMenuController" class="container inner">
       <div class="row">
         <div class="col-sm-8 content">
           <iframe src="https://spoonacular.com/ramen-noodle-coleslaw-556177" style="border: 0px none;  height: 1500px; width: 667px;"></iframe>
@@ -30,12 +30,12 @@
             <h3>Popular Posts</h3>
             <ul class="post-list">
               <% @weekly_menu.sample(5).each do |dish| %>
-                <li>
-                  <div class="icon-overlay small icn-link"> <a href="<%= dish['spoonacularSourceUrl'] %>"><img src="<%= dish['image'] %>" alt="" /> </a> </div>
+                <li ng-click="changeWeeklyRecipe(<%=  %>)">
+                  <div class="icon-overlay small icn-link"><img src="<%= dish['image'] %>" alt="" /> </div>
                   <div class="meta">
-                    <h6><a href="<%= dish['spoonacularSourceUrl'] %>"><%= dish['title'] %></a></h6>
+                    <h6><%= dish['title'] %></h6>
                     
-                    <em><a href="<%= dish['sourceUrl'] %>"><%= dish['sourceName'] %></a></em> </div>
+                    <em>by <%= dish['sourceName'] %></em> </div>
                 </li>
               <% end %>
             </ul>
