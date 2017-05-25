@@ -1,29 +1,47 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="offset"></div>
+  <div class="light-wrapper page-title">
+    <div class="container inner">
+      <h1>Sign-up Page</h1>
+    </div>
+  </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="dark-wrapper">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Please fill out the required forms below:</h3>
+          <div class="divide15"></div>
+          <div class="form-container">
+            <form class="forms" action="#" method="post">
+              <fieldset>
+                <ol>
+                  <li class="form-row text-input-row email-field">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true %>
+                  </li>
+                  <li class="form-row text-input-row password-field">
+                    <%= f.label :password %>
+                      <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                      <% end %><br />
+                    <%= f.password_field :password, autocomplete: "off" %>
+                  </li>
+                  <li class="form-row text-input-row password-field">
+                    <%= f.label :password_confirmation %><br />
+                    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                  </li>
+                  <li class="button-row">
+                    <input type="submit" value="Login" name="submit" class="btn btn-submit bm0 pull-left" />
+                  </li>
+                </ol>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+  <!-- /.dark-wrapper -->

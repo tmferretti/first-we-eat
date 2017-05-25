@@ -1,7 +1,8 @@
 class QuizesController < ApplicationController
 	def new
-		@quiz_recipes = RecipePreference.get_weekly_menu
-		@cb_counter = 1
+		quiz_recipes = RecipePreference.get_random_recipes(32).body
+		@quiz_recipes = quiz_recipes['recipes']
+		ap @quiz_recipes
 		render "new.html.erb"
 	end
 
@@ -11,17 +12,20 @@ class QuizesController < ApplicationController
 					recipe_id: recipe,
 				)
 			if new_recipe.save
-				recipe_join = TastePreference.new(
+				recipe_join = QuizAnswer.new(
 					user_id: current_user.id,
-					cuisine_id: new_recipe.id
+					liked_recipe_id: new_recipe.id
 				)
-				p recipe_join.errors
-				recipe_join.save
+				if recipe_join.save
+					p "success"
+				else
+					p recipe_join.errors
+				end
 			else
 				p new_recipe.errors
 			end
 		end
-		redirect_to '/mydashboard'
+		redirect_to '/'
 	end
-
+	
 end

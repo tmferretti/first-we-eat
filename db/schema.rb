@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518170955) do
+ActiveRecord::Schema.define(version: 20170523181308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "name"
+    t.decimal  "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,10 +28,25 @@ ActiveRecord::Schema.define(version: 20170518170955) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "liked_cuisines", force: :cascade do |t|
+    t.integer  "cuisine_id"
+    t.integer  "user_id"
+    t.decimal  "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "liked_recipes", force: :cascade do |t|
     t.integer  "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "quiz_answers", force: :cascade do |t|
+    t.integer  "liked_recipe_id"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "recipe_preferences", force: :cascade do |t|
@@ -49,10 +65,9 @@ ActiveRecord::Schema.define(version: 20170518170955) do
 
   create_table "taste_preferences", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "cuisine_id"
-    t.integer  "weight"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "liked_recipe_id"
   end
 
   create_table "user_diet_settings", force: :cascade do |t|
@@ -78,6 +93,8 @@ ActiveRecord::Schema.define(version: 20170518170955) do
     t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "username"
+    t.string   "picture"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree

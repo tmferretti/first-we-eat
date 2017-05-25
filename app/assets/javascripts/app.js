@@ -1,6 +1,10 @@
 (function() {
   "use strict";
 
-  angular.module("app", []);
+  var app = angular.module("app", []);
 
+  app.factory('UserService', function() {
+  return {
+      name : 'anonymous'
+  }});
 }());

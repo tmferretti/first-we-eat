@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cuisine_id: 1
+  user_id: 1
+  weight: 9.99
+
+two:
+  cuisine_id: 1
+  user_id: 1
+  weight: 9.99

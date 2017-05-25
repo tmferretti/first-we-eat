@@ -1,3 +1,4 @@
 class LikedRecipe < ApplicationRecord
-	has_many :users, through: :taste_preference
+	has_many :users, through: :quiz_answers
+	has_many :quiz_answers
 end

@@ -1,7 +1,14 @@
 class HomeController < ApplicationController
 	skip_before_action :authenticate_user!, only: [:index]
 	
+
 	def index
+		feat_recipes = RecipePreference.get_random_recipes(8).body
+		rand_recipes = RecipePreference.get_random_recipes(4).body
+		@feat_recipes = feat_recipes.first[1]
+		@rand_recipes = rand_recipes.first[1]
+
+		
 		render "index.html.erb"
 	end
 
