@@ -29,5 +29,4 @@ class ExplorationsController < ApplicationController
 
 		redirect_to '/'	
 	end
-
 end
