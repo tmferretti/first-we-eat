@@ -2,8 +2,14 @@
 
 one:
   name: MyString
+<<<<<<< HEAD
   weight: 9.99
 
 two:
   name: MyString
   weight: 9.99
+=======
+
+two:
+  name: MyString
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244

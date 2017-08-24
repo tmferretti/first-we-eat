@@ -1,16 +1,23 @@
 source 'https://rubygems.org'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
+<<<<<<< HEAD
 gem 'pry'
 gem 'cloudinary'
 gem 'mechanize'
 gem 'nokogiri'
 gem 'rest-client'
+=======
+
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'json'
 gem 'awesome_print'
@@ -47,6 +54,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+<<<<<<< HEAD
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
@@ -54,6 +62,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+=======
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
   gem 'byebug', platform: :mri
 end
 

@@ -1,6 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+<<<<<<< HEAD
 def resolve_layout
     case action_name
     when "new", "create"
@@ -11,6 +12,9 @@ def resolve_layout
       "application"
     end
   end
+=======
+
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
   # GET /resource/sign_up
   # def new
   #   super

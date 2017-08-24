@@ -10,14 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170523181308) do
+=======
+ActiveRecord::Schema.define(version: 20170518170955) do
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "name"
+<<<<<<< HEAD
     t.decimal  "weight"
+=======
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +35,7 @@ ActiveRecord::Schema.define(version: 20170523181308) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "liked_cuisines", force: :cascade do |t|
     t.integer  "cuisine_id"
     t.integer  "user_id"
@@ -36,12 +44,15 @@ ActiveRecord::Schema.define(version: 20170523181308) do
     t.datetime "updated_at", null: false
   end
 
+=======
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
   create_table "liked_recipes", force: :cascade do |t|
     t.integer  "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "quiz_answers", force: :cascade do |t|
     t.integer  "liked_recipe_id"
     t.integer  "user_id"
@@ -49,6 +60,8 @@ ActiveRecord::Schema.define(version: 20170523181308) do
     t.datetime "updated_at",      null: false
   end
 
+=======
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
   create_table "recipe_preferences", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "diet_restriction"
@@ -65,9 +78,16 @@ ActiveRecord::Schema.define(version: 20170523181308) do
 
   create_table "taste_preferences", force: :cascade do |t|
     t.integer  "user_id"
+<<<<<<< HEAD
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "liked_recipe_id"
+=======
+    t.integer  "cuisine_id"
+    t.integer  "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
   end
 
   create_table "user_diet_settings", force: :cascade do |t|
@@ -93,8 +113,11 @@ ActiveRecord::Schema.define(version: 20170523181308) do
     t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+<<<<<<< HEAD
     t.string   "username"
     t.string   "picture"
+=======
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree

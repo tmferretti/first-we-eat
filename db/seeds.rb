@@ -9,6 +9,11 @@ response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.c
   headers:{
     "X-Mashape-Key" => "mjujTXvEe0mshWJmTGHz9riuUeIRp1CtxpRjsnnvhfdmxs5G41",
     "Accept" => "application/json"
+<<<<<<< HEAD
   }
+=======
+  },
+  parameters:
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
 
 SpoonacularDev.create(data: response.body)

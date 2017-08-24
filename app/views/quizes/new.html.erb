@@ -1,6 +1,7 @@
 <div class="offset"></div>
   <div class="light-wrapper page-title">
     <div class="container inner">
+<<<<<<< HEAD
       <h1>Quiz</h1>
       <p>Below are images and titles of some recipes that you might run in to while using this app. Just click on the ones you are interested in and we will take care of the rest.</p>
     </div>
@@ -23,6 +24,43 @@
               </li>
             <% end %>
           </ul>
+=======
+      <h1>Portfolio with 4 Columns</h1>
+    </div>
+  </div>
+  
+    <div class="dark-wrapper">
+      <div class="container inner">
+        <div class="portfolio">
+          <ul class="filter">
+            <li><a class="active" href="#" data-filter="*">All</a></li>
+            <li><a href="#" data-filter=".graphic">Graphic Design</a></li>
+            <li><a href="#" data-filter=".mockup">Business Card</a></li>
+            <li><a href="#" data-filter=".video">Identity</a></li>
+            <li><a href="#" data-filter=".music">Application</a></li>
+          </ul>
+          <!-- /.filter -->
+          <div ng-app="app">
+
+
+            <%= form_tag("/quiz", method: "post") do %>
+              <ul class="items col4">
+                <% @quiz_recipes.sample(30).each do |recipe| %>
+                  <li class="item graphic">
+                      <label class="image-checkbox" title="<%= recipe['title'] %>">
+                        <img src="<%= recipe['image'] %>" />
+                        <input type="checkbox" name="liked_recipes[]" value="<%= recipe['id'] %>" style="width:312px;height:209px;"/>
+                        <figure class="icon-overlay medium icn-more"></figure>
+                        <div class="image-caption">
+                          <h3><!-- <a href="portfolio-post.html"> --><%= recipe['title'] %></h3>
+                          <span class="meta">source: <%= recipe['sourceName'] %></span> 
+                        </div>
+                      </label>
+                  </li>
+                <% end %>
+              </ul>
+            
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
           </div>  
         </div>
         <!-- /.portfolio --> 
@@ -34,7 +72,11 @@
       <div class="container inner text-center">
         <div class="thin">
           <p class="lead">If you like what you see, let's work together.</p>
+<<<<<<< HEAD
           <input type="submit" value="Get Cooking" name="submit" class="btn btn-submit bm0 pull-center" />
+=======
+          <p class="btn bm0"><%= submit_tag("Get Cooking.") %></p> </div>
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
           <% end %>
       </div>
     </div>

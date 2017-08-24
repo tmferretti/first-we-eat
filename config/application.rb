@@ -6,12 +6,16 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
 module FirstWeEat
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+<<<<<<< HEAD
 	config.generators do |g|
 		g.test_framework :rspec,
 			fixtures: true,
@@ -25,3 +29,7 @@ module FirstWeEat
   end
 end
 
+=======
+  end
+end
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244

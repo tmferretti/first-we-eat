@@ -10,6 +10,7 @@ class RecipePreference < ApplicationRecord
 
 		menu_data = SpoonacularDev.first['data']
 		menu_json = JSON.parse menu_data.gsub('=>', ':')
+<<<<<<< HEAD
 		p menu_json
 		weekly_menu = menu_json['recipes']
 		p weekly_menu
@@ -86,4 +87,9 @@ class RecipePreference < ApplicationRecord
 	end
 
 
+=======
+		weekly_menu = menu_json['recipes']
+		return weekly_menu
+	end
+>>>>>>> 1dce82bdf31afcdec195be5fd5974dc529ede244
 end
